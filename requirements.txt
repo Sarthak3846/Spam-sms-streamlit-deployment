@@ -3,3 +3,4 @@ tensorflow
 joblib
 numpy
 pandas
+dill
