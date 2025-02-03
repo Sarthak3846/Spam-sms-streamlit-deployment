@@ -48,5 +48,5 @@ model = tf.keras.Sequential([
 model.compile(loss='binary_crossentropy', optimizer=tf.keras.optimizers.Adam(learning_rate=0.001), metrics=['accuracy'])
 model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=10, batch_size=32)
 
-model.save("improved_spam_classifier.h5", save_format="h5")
+model.save("improved_spam_classifier.h5", save_format="h5", compile=False)
 joblib.dump(tokenizer, "tokenizer.pkl")
